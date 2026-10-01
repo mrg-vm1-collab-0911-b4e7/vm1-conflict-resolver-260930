@@ -1,4 +1,4 @@
-SECURITY_MODE=BASE
+SECURITY_MODE=ATTACKER_RENAMED
 line02=stable
 line03=stable
 line04=stable
