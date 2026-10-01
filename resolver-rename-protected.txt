@@ -1,4 +1,4 @@
-SECURITY_MODE=BASE
+SECURITY_MODE=SAFE_OWNER
 line02=stable
 line03=stable
 line04=stable
