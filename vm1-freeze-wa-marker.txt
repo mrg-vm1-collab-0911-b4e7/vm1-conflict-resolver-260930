@@ -1,1 +1,1 @@
-VM1 freeze merge-action harmless external marker 2026-10-01
+SAFE_OWNER_OUTSIDE_261002
