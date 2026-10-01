@@ -1,1 +1,1 @@
-VM1 stale-review chain H1 without trusted gate
+VM1 stale-review chain H2 without trusted gate
