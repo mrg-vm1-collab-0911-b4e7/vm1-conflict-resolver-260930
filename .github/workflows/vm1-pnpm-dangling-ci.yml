@@ -1,0 +1,33 @@
+name: VM1 PNPM Dangling CI
+on:
+  pull_request:
+    branches:
+      - vm1-pnpm-dangling-base-261008
+  push:
+    branches:
+      - vm1-pnpm-dangling-base-261008
+permissions:
+  contents: read
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    name: vm1-pnpm-default-ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.4.2
+          run_install: false
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+  release:
+    if: github.event_name == 'push'
+    name: vm1-pnpm-hoisted-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.4.2
+          run_install: false
+      - run: pnpm install --frozen-lockfile --ignore-scripts --node-linker=hoisted
