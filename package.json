@@ -1,0 +1,12 @@
+{
+  "name": "vm1-lockonly",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "ansi-regex": "6.0.1",
+    "minimist": "1.2.8",
+    "once": "1.4.0",
+    "wrappy": "1.0.2",
+    "is-number": ">=5 <8"
+  }
+}
