@@ -1,0 +1,7 @@
+{
+  "name": "vm1-pnpm-semantic-a",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@12.4.2",
+  "dependencies": {"is-number": "7.0.0"}
+}
