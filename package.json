@@ -1,24 +1,10 @@
 {
-  "name": "vm1-pnpm-dangling-package-version",
-  "version": "1.0.0",
+  "name": "vm1-pnpm-dangling-clean",
   "private": true,
-  "packageManager": "pnpm@12.4.2",
   "dependencies": {
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
-    "wrappy": "1.0.2"
-  },
-  "description": "Local dangling peer-suffixed package-version merge fixture",
-  "license": "UNLICENSED",
-  "engines": {
-    "node": ">=18"
-  },
-  "keywords": [
-    "pnpm",
-    "lockfile",
-    "merge-fixture"
-  ],
-  "devDependencies": {
-    "old-react-dom": "npm:react-dom@18.2.0"
+    "chalk": "5.4.1",
+    "lodash": "4.17.21",
+    "supports-color": "7.2.0",
+    "zod": "4.1.12"
   }
 }
