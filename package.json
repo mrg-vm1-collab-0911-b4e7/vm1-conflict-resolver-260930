@@ -2,7 +2,7 @@
   "name": "vm1-pnpm-peer-clean",
   "private": true,
   "devDependencies": {
-    "@typescript-eslint/parser": "8.45.0",
+    "@typescript-eslint/parser": "8.46.0",
     "typescript": "5.9.2",
     "eslint": "9.20.0"
   }
