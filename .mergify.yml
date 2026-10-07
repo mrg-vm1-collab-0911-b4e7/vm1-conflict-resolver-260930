@@ -9,10 +9,6 @@ conflict_resolvers:
   - paths:
       - pnpm-lock.yaml
     strategy: pnpm
-  - paths:
-      - pyproject.toml
-      - uv.lock
-    strategy: uv
 queue_rules:
   - name: vm1-pnpm-single-261007
     queue_conditions:
@@ -67,16 +63,6 @@ queue_rules:
     autoqueue: true
     merge_conditions:
       - check-success = vm1-pnpm-dangling-never-261008
-    batch_size: 2
-    batch_max_wait_time: 5 minutes
-    merge_method: merge-batch
-  - name: vm1-uv-dangling-261008
-    queue_conditions:
-      - base = vm1-uv-dangling-base-261008
-      - title ~= ^VM1_UV_DANGLING_[AB]_261008$
-    autoqueue: true
-    merge_conditions:
-      - check-success = vm1-uv-dangling-never-261008
     batch_size: 2
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
