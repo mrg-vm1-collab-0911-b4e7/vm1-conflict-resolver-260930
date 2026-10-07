@@ -1,0 +1,40 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      ansi-regex:
+        specifier: 6.0.1
+        version: 6.0.1
+      is-number:
+        specifier: 6.0.0
+        version: 6.0.0
+      wrappy:
+        specifier: 1.0.2
+        version: 1.0.2
+
+packages:
+
+  ansi-regex@6.0.1:
+    resolution: {integrity: sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==}
+    engines: {node: '>=12'}
+
+  is-number@6.0.0:
+    resolution: {integrity: sha512-Wu1VHeILBK8KAWJUAiSZQX94GmOE45Rg6/538fKwiloUu21KncEkYGPqob2oSZ5mUT73vLGrHQjKw3KMPwfDzg==}
+    engines: {node: '>=0.10.0'}
+
+  wrappy@1.0.2:
+    resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
+
+snapshots:
+
+  ansi-regex@6.0.1: {}
+
+  is-number@6.0.0: {}
+
+  wrappy@1.0.2: {}
