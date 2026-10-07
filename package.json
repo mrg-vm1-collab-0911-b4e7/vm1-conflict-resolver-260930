@@ -17,5 +17,8 @@
     "pnpm",
     "lockfile",
     "merge-fixture"
-  ]
+  ],
+  "devDependencies": {
+    "old-react-dom": "npm:react-dom@18.2.0"
+  }
 }
