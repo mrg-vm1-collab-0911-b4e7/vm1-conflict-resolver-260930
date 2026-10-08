@@ -10,6 +10,7 @@
 
 
 
+    {"id":"insert-B","effect":"noop"},
     {"id":"anchor-C","effect":"deny"}
   ]
 }
