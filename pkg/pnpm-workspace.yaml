@@ -1,2 +1,2 @@
 allowBuilds:
-  vm1-buildpolicy-demo: true
+  vm1-buildpolicy-demo: false
