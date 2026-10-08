@@ -99,11 +99,11 @@ queue_rules:
   - name: vm1-pkgopt-261009
     branch_protection_injection_mode: merge
     queue_conditions:
-      - base = vm1-pkgopt-base-261009
-      - title ~= ^VM1_PKGOPT_[AB]_261009$
+      - base = vm1-pkgopt-sec-base-261009
+      - title ~= ^VM1_PKGOPT_SEC_[AB]_261009$
     autoqueue: true
     merge_conditions:
-      - check-success = vm1-pkgopt-gate-261009
+      - check-success = vm1-pkgopt-sec-gate-261009
     batch_size: 2
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
