@@ -1,7 +1,7 @@
 {
   "rules": [
     {"id":"anchor-A","effect":"deny"},
-
+    {"id":"stage-elevate","effect":"noop"},
 
 
 
