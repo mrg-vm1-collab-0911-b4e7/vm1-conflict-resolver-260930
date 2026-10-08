@@ -19,6 +19,9 @@ importers:
 
   packages/app-a:
     dependencies:
+      is-number:
+        specifier: 'catalog:'
+        version: 7.0.0
       left-pad:
         specifier: 'catalog:'
         version: 1.3.0

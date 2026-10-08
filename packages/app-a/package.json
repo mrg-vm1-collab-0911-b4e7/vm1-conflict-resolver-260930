@@ -1,1 +1,9 @@
-{"name":"app-a","version":"1.0.0","private":true,"dependencies":{"left-pad":"catalog:"}}
+{
+  "name": "app-a",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "left-pad": "catalog:",
+    "is-number": "catalog:"
+  }
+}
