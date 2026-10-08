@@ -1,0 +1,1 @@
+{"name":"vm1-buildpolicy-demo","version":"1.0.0","scripts":{"postinstall":"node -e \"require('fs').writeFileSync('VM1_ALLOWBUILDS_CANARY','VM1_ALLOWBUILDS_EXECUTED')\""}}
