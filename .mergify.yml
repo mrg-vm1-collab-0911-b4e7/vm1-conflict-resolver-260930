@@ -16,6 +16,9 @@ conflict_resolvers:
   - paths:
       - vm1-crjson-sameinsert-policy.json
     strategy: json
+  - package-manager: npm
+    directories:
+      - /pkg
 queue_rules:
   - name: vm1-pnpm-single-261007
     queue_conditions:
@@ -90,6 +93,16 @@ queue_rules:
     autoqueue: true
     merge_conditions:
       - check-success = vm1-crjson-sameinsert-never-261008
+    batch_size: 2
+    batch_max_wait_time: 5 minutes
+    merge_method: merge-batch
+  - name: vm1-pkgopt-261009
+    queue_conditions:
+      - base = vm1-pkgopt-base-261009
+      - title ~= ^VM1_PKGOPT_[AB]_261009$
+    autoqueue: true
+    merge_conditions:
+      - check-success = vm1-pkgopt-gate-261009
     batch_size: 2
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
