@@ -97,6 +97,7 @@ queue_rules:
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
   - name: vm1-pkgopt-261009
+    branch_protection_injection_mode: merge
     queue_conditions:
       - base = vm1-pkgopt-base-261009
       - title ~= ^VM1_PKGOPT_[AB]_261009$
