@@ -1,8 +1,5 @@
 {
   "name": "vm1-pnpm-removeupdate",
   "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "left-pad": "catalog:"
-  }
+  "private": true
 }
