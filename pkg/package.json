@@ -1,1 +1,1 @@
-{"name":"vm1-workspace-shadow-root","version":"1.0.0","private":true}
+{"name":"vm1-workspace-shadow-root","version":"1.0.0","private":true,"dependencies":{"is-number":"7.0.0"}}
