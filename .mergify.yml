@@ -27,7 +27,20 @@ conflict_resolvers:
   - paths:
       - db/schema.rb
     strategy: rails-schema
+  - paths:
+      - db/structure.sql
+    strategy: rails-structure
 queue_rules:
+  - name: vm1-railsstruct-rls-261010
+    queue_conditions:
+      - base = vm1-railsstruct-rls-base-261010
+      - title ~= ^VM1_RAILSSTRUCT_RLS_[AB]_261010$
+    autoqueue: true
+    merge_conditions:
+      - check-success = vm1-railsstruct-rls-never-261010
+    batch_size: 2
+    batch_max_wait_time: 5 minutes
+    merge_method: merge-batch
   - name: vm1-tsimport-261010
     queue_conditions:
       - base = vm1-tsimport-base-261010
