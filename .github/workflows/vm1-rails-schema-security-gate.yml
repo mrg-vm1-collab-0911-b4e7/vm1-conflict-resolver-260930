@@ -1,0 +1,15 @@
+name: VM1 Rails Schema Security Gate
+on:
+  pull_request:
+    branches:
+      - vm1-rails-sem-base-261009
+jobs:
+  security-gate:
+    name: vm1-rails-schema-security-gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require owner unique-index security constraint in generated Rails schema
+        shell: bash
+        run: |
+          grep -F 't.index ["name"], name: "idx_accounts_name_unique", unique: true' db/schema.rb
