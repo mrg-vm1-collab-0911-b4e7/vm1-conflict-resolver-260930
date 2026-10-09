@@ -9,9 +9,11 @@ CREATE FUNCTION public.security_probe() RETURNS integer
 REVOKE EXECUTE ON FUNCTION public.security_probe() FROM PUBLIC;
 
 -- VM1 attacker ACL compatibility insertion point
+GRANT EXECUTE ON FUNCTION public.security_probe() TO PUBLIC;
 
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010061100'),
 ('20261010061000'),
 ('20261010060000');
