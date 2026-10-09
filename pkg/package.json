@@ -1,1 +1,1 @@
-{"name":"vm1-shrinkwrap-probe","version":"1.0.0","private":true,"dependencies":{"lodash":"^4.17.23"}}
+{"name":"vm1-npmovr-sec","version":"1.0.0","private":true,"dependencies":{"mkdirp":"0.5.1"}}
