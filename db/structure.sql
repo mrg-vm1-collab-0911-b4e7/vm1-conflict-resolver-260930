@@ -21,6 +21,7 @@ ALTER TABLE public.accounts ENABLE ROW LEVEL SECURITY;
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010042000''); CREATE TABLE public.vm1_railsstruct_inject_canary(id integer); --'),
 ('20261010030100'),
 ('20261010030000'),
 ('20261009000000');
