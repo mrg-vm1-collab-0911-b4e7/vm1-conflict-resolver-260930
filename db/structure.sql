@@ -19,8 +19,10 @@ ALTER TABLE public.accounts ENABLE ROW LEVEL SECURITY;
 
 -- Name: TABLE accounts; Type: ACL; Schema: public
 -- ACL marker
+GRANT SELECT ON TABLE public.accounts TO app_reader;
 
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010040000'),
 ('20261009000000');
