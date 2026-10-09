@@ -3,4 +3,4 @@
 
 "vm1-yarn-source-canary@^1.0.0":
   version "1.0.0"
-  resolved "file:./artifacts/evil.tgz#8c05128a5ca25158f8122eb790faa3b460dbdaf3"
+  resolved "file:./artifacts/evil-mirror.tgz#8c05128a5ca25158f8122eb790faa3b460dbdaf3"
