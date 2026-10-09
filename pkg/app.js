@@ -1,1 +1,2 @@
-console.log("BASE_NO_SECURITY_IMPORT");
+import {guard} from "./security.js";
+console.log(guard ? "AUTHZ_ENFORCED_261009" : "AUTHZ_BYPASSED_261009");
