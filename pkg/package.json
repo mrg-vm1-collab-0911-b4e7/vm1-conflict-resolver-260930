@@ -1,1 +1,1 @@
-{"name":"vm1-workspaces-root","version":"1.0.0","private":true,"workspaces":["packages/*"],"scripts":{"test":"npm test --workspaces --if-present"}}
+{"name":"vm1-workspaces-root","version":"1.0.0","description":"OWNER_SECURITY_WORKSPACE","private":true,"workspaces":["packages/core"],"scripts":{"test":"npm test --workspaces --if-present"}}
