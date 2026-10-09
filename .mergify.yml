@@ -251,12 +251,13 @@ queue_rules:
     merge_method: merge-batch
 
   - name: vm1-viewinvoker-261010
+    branch_protection_injection_mode: merge
     queue_conditions:
       - base = vm1-viewinvoker-base-261010
       - title ~= ^VM1_VIEWINVOKER_[AB]_261010$
     autoqueue: true
     merge_conditions:
-      - check-success = vm1-viewinvoker-never-261010
+      - check-success = vm1-viewinvoker-impact-gate-261010
     batch_size: 2
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
