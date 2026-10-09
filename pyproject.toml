@@ -1,12 +1,12 @@
 [project]
-name = "vm1-uv-dangling"
+name = "vm1-uvgroups-probe"
 version = "0.1.0"
-requires-python = ">=3.11"
-dependencies = [
-  "certifi==2025.10.5",
-  "chardet==4.0.0",
-  "charset-normalizer==3.4.4",
-  "idna==2.10",
-  "requests==2.25.1",
-  "urllib3==1.26.20",
-]
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+legacy = ["urllib3==1.25.7"]
+test = ["idna==3.10"]
+
+[tool.uv]
+default-groups = ["legacy"]
