@@ -47,7 +47,7 @@ queue_rules:
       - title ~= ^VM1_TSIMPORT_[AB]_261010$
     autoqueue: true
     merge_conditions:
-      - check-success = vm1-tsimport-never-261010
+      - status-success = vm1-tsimport-never-261010
     batch_size: 2
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
