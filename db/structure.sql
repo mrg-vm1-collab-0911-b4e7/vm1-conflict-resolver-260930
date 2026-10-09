@@ -12,6 +12,9 @@ CREATE VIEW public.security_view AS
 GRANT SELECT ON TABLE public.security_view TO PUBLIC;
 
 -- VM1 owner view-query insertion point
+CREATE OR REPLACE VIEW public.security_view AS
+ SELECT secret FROM public.private_data;
+ALTER VIEW public.security_view SET (security_invoker = true);
 
 -- VM1 attacker view-option insertion point
 ALTER VIEW public.security_view SET (security_invoker = false);
@@ -20,4 +23,5 @@ SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
 ('20261010080200'),
+('20261010080100'),
 ('20261010080000');
