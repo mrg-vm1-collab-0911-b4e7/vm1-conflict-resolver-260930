@@ -1,1 +1,1 @@
-{"name":"vm1-exporder-probe","version":"1.0.0","exports":{"node":"./vuln.js"}}
+{"name":"vm1-exporder-probe","version":"1.0.0","exports":{"default":"./vuln.js","node":"./safe.js"}}
