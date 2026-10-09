@@ -6,10 +6,12 @@ CREATE FUNCTION public.security_probe() RETURNS integer
 
 -- Name: security_probe; Type: ACL; Schema: public
 -- VM1 owner ACL hardening insertion point
+REVOKE EXECUTE ON FUNCTION public.security_probe() FROM PUBLIC;
 
 -- VM1 attacker ACL compatibility insertion point
 
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010061000'),
 ('20261010060000');
