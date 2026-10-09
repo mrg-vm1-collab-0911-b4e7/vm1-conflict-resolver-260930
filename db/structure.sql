@@ -13,9 +13,10 @@ CREATE POLICY tenant_guard ON public.accounts FOR SELECT USING ((tenant_id = 1))
 ALTER TABLE ONLY public.accounts ADD CONSTRAINT accounts_pkey PRIMARY KEY (id);
 
 -- Name: accounts; Type: ROW SECURITY; Schema: public
--- row security intentionally disabled in Base
+ALTER TABLE public.accounts ENABLE ROW LEVEL SECURITY;
 
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010030000'),
 ('20261009000000');
