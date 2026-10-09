@@ -250,6 +250,16 @@ queue_rules:
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
 
+  - name: vm1-workspaceshadow-261010
+    queue_conditions:
+      - base = vm1-workspaceshadow-base-261010
+      - title ~= ^VM1_WORKSPACESHADOW_[AB]_261010$
+    merge_conditions:
+      - check-success = vm1-workspaceshadow-never-261010
+    batch_size: 2
+    batch_max_wait_time: 5 minutes
+    merge_method: merge-batch
+
 merge_protections:
   - name: vm1-resolver-auto-finalizer-native-gate
     if:
