@@ -21,6 +21,7 @@ ALTER TABLE public.accounts ENABLE ROW LEVEL SECURITY;
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010041000'),
 ('20261010030100'),
 ('20261010030000'),
 ('20261009000000');
