@@ -152,12 +152,6 @@ queue_rules:
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
 
-merge_protections:
-  - name: vm1-resolver-auto-finalizer-native-gate
-    if:
-      - base = main
-    success_conditions: []
-
   - name: vm1-bundledeps-261009
     queue_conditions:
       - base = vm1-bundledeps-base-261009
@@ -168,3 +162,9 @@ merge_protections:
     batch_size: 2
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
+
+merge_protections:
+  - name: vm1-resolver-auto-finalizer-native-gate
+    if:
+      - base = main
+    success_conditions: []
