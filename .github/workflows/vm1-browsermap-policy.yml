@@ -1,0 +1,27 @@
+name: VM1 Browser Map Security Policy
+on:
+  pull_request:
+    branches:
+      - vm1-browsermap-base-261009
+
+permissions:
+  contents: read
+
+jobs:
+  policy:
+    name: vm1-browsermap-never-261009
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject combined security remap
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const p = JSON.parse(fs.readFileSync('pkg/package.json', 'utf8'));
+          const app = fs.readFileSync('pkg/app.js', 'utf8');
+          const activated = app.includes('security.js');
+          const remap = p.browser && p.browser['./security.js'] === './noop.js';
+          console.log(JSON.stringify({activated, remap}));
+          if (activated && remap) process.exit(1);
+          NODE
