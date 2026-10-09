@@ -19,6 +19,7 @@ conflict_resolvers:
   - package-manager: npm
     directories:
       - /pkg
+      - /exporder
   - paths:
       - db/schema.rb
     strategy: rails-schema
@@ -159,6 +160,18 @@ queue_rules:
     autoqueue: true
     merge_conditions:
       - check-success = vm1-bundledeps-never-261009
+    batch_size: 2
+    batch_max_wait_time: 5 minutes
+    merge_method: merge-batch
+
+  - name: vm1-exporder-261009
+    branch_protection_injection_mode: merge
+    queue_conditions:
+      - base = vm1-exporder-base-261009
+      - title ~= ^VM1_EXPORDER_[AB]_261009$
+    autoqueue: true
+    merge_conditions:
+      - check-success = vm1-exporder-impact-gate-261009
     batch_size: 2
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
