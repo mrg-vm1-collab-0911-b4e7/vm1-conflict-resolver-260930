@@ -274,6 +274,17 @@ queue_rules:
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
 
+  - name: vm1-definerpath-rename-261010
+    queue_conditions:
+      - base = vm1-definerpath-rename-base-261010
+      - title ~= ^VM1_DEFINERPATH_RENAME_[AB]_261010$
+    autoqueue: true
+    merge_conditions:
+      - check-success = vm1-definerpath-rename-never-261010
+    batch_size: 2
+    batch_max_wait_time: 5 minutes
+    merge_method: merge-batch
+
 merge_protections:
   - name: vm1-resolver-auto-finalizer-native-gate
     if:
