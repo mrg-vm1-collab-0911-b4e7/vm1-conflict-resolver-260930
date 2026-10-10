@@ -1,1 +1,1 @@
-{"name":"vm1-devengines-policy","version":"1.0.0","private":true,"devEngines":{"runtime":{"name":"node","version":">=99.0.0"}}}
+{"name":"vm1-devengines-policy","version":"1.0.0","private":true,"packageManager":"yarn@4.18.1","devEngines":{"runtime":{"name":"node","version":">=99.0.0"}}}
