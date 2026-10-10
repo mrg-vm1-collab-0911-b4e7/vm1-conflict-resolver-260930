@@ -24,6 +24,7 @@ CREATE OR REPLACE VIEW public.security_barrier_view_old AS
 ALTER VIEW public.security_barrier_view_old SET (security_barrier = true);
 
 -- VM1 attacker view-option insertion point
+ALTER VIEW public.security_barrier_view_old SET (security_barrier = false);
 
 -- VM1 owner rename insertion point
 ALTER VIEW public.security_barrier_view_old
@@ -32,5 +33,6 @@ ALTER VIEW public.security_barrier_view_old
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010110200'),
 ('20261010110100'),
 ('20261010110000');
