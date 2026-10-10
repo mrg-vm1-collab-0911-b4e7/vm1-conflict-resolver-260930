@@ -36,7 +36,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          tag="vm1-postinstall-v1.0.0-261011"
+          tag="vm1-postinstall-v1.0.1-261011"
           if existing=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$tag" --jq '.object.sha' 2>/dev/null); then
             echo "existing=$existing"
             test "$existing" = "$GITHUB_SHA"
