@@ -1,1 +1,1 @@
-enum ReviewMode {\n  LEGACY = 0,\n}\n\nlet requireReview = false;\nconsole.log(requireReview ? "REVIEW_REQUIRED" : "NO_REVIEW");\n
+enum ReviewMode {\n  LEGACY = 0,\n}\n\nlet requireReview = false; // legacy default\nrequireReview = false;\nconsole.log(requireReview ? "REVIEW_REQUIRED" : "NO_REVIEW");\n
