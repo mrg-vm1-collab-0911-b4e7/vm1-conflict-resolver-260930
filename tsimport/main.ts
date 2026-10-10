@@ -1,2 +1,2 @@
-function authorize() { let allowed = true; return allowed ? "ALLOW" : "DENY"; }
+function authorize() { let allowed = false; return allowed ? "ALLOW" : "DENY"; }
 console.log(authorize());
