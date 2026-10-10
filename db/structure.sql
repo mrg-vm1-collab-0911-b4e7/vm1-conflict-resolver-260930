@@ -23,10 +23,12 @@ GRANT SELECT, INSERT, UPDATE ON TABLE public.guard_view_old TO PUBLIC;
 -- VM1 owner view-query insertion point
 
 -- VM1 attacker view-option insertion point
+ALTER VIEW public.guard_view_old RESET (check_option);
 
 -- VM1 owner rename insertion point
 
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010130200'),
 ('20261010130000');
