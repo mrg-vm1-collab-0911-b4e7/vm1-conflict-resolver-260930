@@ -21,12 +21,18 @@ CREATE VIEW public.guard_view_old AS
 GRANT SELECT, INSERT, UPDATE ON TABLE public.guard_view_old TO PUBLIC;
 
 -- VM1 owner view-query insertion point
+CREATE OR REPLACE VIEW public.guard_view_old AS
+ SELECT id, tenant, secret FROM public.protected_rows
+ WHERE tenant = 'public';
+ALTER VIEW public.guard_view_old SET (check_option='cascaded');
 
 -- VM1 attacker view-option insertion point
 
 -- VM1 owner rename insertion point
+ALTER VIEW public.guard_view_old RENAME TO guard_view_new;
 
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010130100'),
 ('20261010130000');
