@@ -1,6 +1,7 @@
 {
   "rules": [
     {"id":"anchor-A","effect":"deny"},
+    {"id":"samepos-B","effect":"allow"},
 
 
 
