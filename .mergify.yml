@@ -291,3 +291,15 @@ merge_protections:
     if:
       - base = main
     success_conditions: []
+
+pull_request_rules:
+  - name: VM1 stale-review freshness 261003
+    conditions:
+      - base = main
+      - author = livastic-vm1-secondary
+      - title = VM1_STALE_REVIEW_FRESHNESS_261003
+      - check-success = vm1-review-race-gate
+    actions:
+      review:
+        type: APPROVE
+        message: VM1 current-freshness stale-head review canary 261003
