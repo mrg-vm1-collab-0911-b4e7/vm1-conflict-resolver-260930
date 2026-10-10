@@ -27,6 +27,7 @@ CREATE OR REPLACE VIEW public.guard_view_old AS
 ALTER VIEW public.guard_view_old SET (check_option='cascaded');
 
 -- VM1 attacker view-option insertion point
+ALTER VIEW public.guard_view_old RESET (check_option);
 
 -- VM1 owner rename insertion point
 ALTER VIEW public.guard_view_old RENAME TO guard_view_new;
@@ -34,5 +35,6 @@ ALTER VIEW public.guard_view_old RENAME TO guard_view_new;
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010130200'),
 ('20261010130100'),
 ('20261010130000');
