@@ -1,1 +1,1 @@
-{"name":"vm1-toolchain-root","version":"1.0.0","private":true,"packageManager":"yarn@1.22.19"}
+{"name":"vm1-toolchain-root","version":"1.0.0","private":true,"packageManager":"yarn@4.18.1","dependencies":{"vm1-toolchain-canary":"file:./dep-src"}}
