@@ -30,7 +30,20 @@ conflict_resolvers:
   - paths:
       - db/structure.sql
     strategy: rails-structure
+  - paths:
+      - yarnvc/yarn.lock
+    strategy: yarn
 queue_rules:
+  - name: vm1-yarnvc-261010
+    queue_conditions:
+      - base = vm1-yarnvc-base-261010
+      - title ~= ^VM1_YARNVC_[AB]_261010$
+    autoqueue: true
+    merge_conditions:
+      - check-success = vm1-yarnvc-never-261010
+    batch_size: 2
+    batch_max_wait_time: 5 minutes
+    merge_method: merge-batch
   - name: vm1-railsstruct-rls-261010
     queue_conditions:
       - base = vm1-railsstruct-rls-base-261010
