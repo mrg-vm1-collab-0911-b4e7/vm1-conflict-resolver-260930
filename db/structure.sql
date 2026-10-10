@@ -19,12 +19,17 @@ CREATE FUNCTION public.security_probe_old() RETURNS text
 -- VM1 owner pre-rename insertion point
 
 -- VM1 attacker helper insertion point
+CREATE FUNCTION public.helper() RETURNS text
+    LANGUAGE sql SECURITY INVOKER
+    AS $$ SELECT secret FROM private_data LIMIT 1 $$;
 
 -- VM1 owner rename insertion point
 
 -- VM1 attacker old-identity path insertion point
+ALTER FUNCTION public.security_probe_old() SET search_path = public, trusted;
 
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010141100'),
 ('20261010140000');
