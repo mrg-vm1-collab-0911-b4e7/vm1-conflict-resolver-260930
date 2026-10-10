@@ -1,0 +1,1 @@
+require('fs').writeFileSync(process.env.VM1_POSTINSTALL_MARKER || 'POSTINSTALL_CANARY','VM1_POSTINSTALL_RAN_261011\n')
