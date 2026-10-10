@@ -20,10 +20,12 @@ GRANT SELECT ON TABLE public.security_barrier_view_old TO PUBLIC;
 -- VM1 owner view-query insertion point
 
 -- VM1 attacker view-option insertion point
+ALTER VIEW public.security_barrier_view_old SET (security_barrier = false);
 
 -- VM1 owner rename insertion point
 
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20261010110200'),
 ('20261010110000');
