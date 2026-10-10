@@ -1,1 +1,1 @@
-class Policy { requireReview = false; } class ProtectedPolicy extends Policy {}\nconst p = new ProtectedPolicy();\nconsole.log(p.requireReview ? 'REVIEW_REQUIRED' : 'NO_REVIEW');\n
+class Policy { requireReview = false; } class ProtectedPolicy extends Policy { requireReview = false; }\nconst p = new ProtectedPolicy();\nconsole.log(p.requireReview ? 'REVIEW_REQUIRED' : 'NO_REVIEW');\n
