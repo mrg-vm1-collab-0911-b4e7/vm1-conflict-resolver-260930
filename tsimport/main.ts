@@ -1,4 +1,4 @@
 class Policy {
-  requireReview = false;
+  requireReview = true;
 }
 console.log(new Policy().requireReview ? "REVIEW_REQUIRED" : "NO_REVIEW");
