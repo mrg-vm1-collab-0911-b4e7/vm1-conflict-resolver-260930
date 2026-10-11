@@ -3,5 +3,8 @@ name = "vm1-root"
 version = "0.0.1"
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = [ "setuptools>=68" ]
 build-backend = "setuptools.build_meta"
+
+[tool.uv.sources]
+wheel = { path = "malwheel" }
