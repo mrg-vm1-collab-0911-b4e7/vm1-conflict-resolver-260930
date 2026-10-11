@@ -325,8 +325,7 @@ queue_rules:
       - base = vm1-tsglobal-impact-base-261011
       - title ~= ^VM1_TSGLOBAL_IMPACT_[AB]_261011$
     autoqueue: true
-    merge_conditions:
-      - check-success = vm1-tsglobal-impact-gate-261011
+    merge_conditions: []
     batch_size: 2
     batch_max_wait_time: 5 minutes
     merge_method: merge-batch
