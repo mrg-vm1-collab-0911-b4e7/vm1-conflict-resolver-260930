@@ -1,4 +1,4 @@
 class Policy {
-  authorize() { return "ALLOW"; }
+  authorize() { return "DENY"; }
 }
 console.log(new Policy().authorize());
