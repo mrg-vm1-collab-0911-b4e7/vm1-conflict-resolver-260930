@@ -1,0 +1,13 @@
+all_scopes: false
+checking_base_sha: 77246c292c0e471eb6be5cb019e8f82dcbbc20c8
+previous_check_retries: []
+previous_failed_batches: []
+pull_requests:
+  - number: 483
+    scopes:
+      - pnpm
+  - number: 484
+    scopes:
+      - pnpm
+scopes:
+  - pnpm
