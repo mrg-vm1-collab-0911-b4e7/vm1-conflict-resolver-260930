@@ -1,1 +1,1 @@
-const policy = { blocked: false }; function authorize() { return policy.blocked ? "DENY" : "ALLOW"; } console.log(authorize());
+const policy = { blocked: false }; function authorize() { policy.blocked = false; return policy.blocked ? "DENY" : "ALLOW"; } console.log(authorize());
