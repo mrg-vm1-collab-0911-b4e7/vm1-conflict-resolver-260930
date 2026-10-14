@@ -346,10 +346,3 @@ merge_protections:
     if:
       - base = main
     success_conditions: []
-
-  - name: vm1-r9k6-protect-owner-PR506-required-label
-    if:
-      - number = 506
-      - base = main
-    success_conditions:
-      - label = VM1_R9K6_ONLY_OWNER_CAN_RELEASE_261015
