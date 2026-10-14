@@ -346,3 +346,19 @@ merge_protections:
     if:
       - base = main
     success_conditions: []
+
+pull_request_rules:
+  - name: vm1-botaccount-pr54-actor-deny-261014
+    conditions:
+      - number = 54
+      - author = livastic-vm1-secondary
+      - base = main
+      - title = VM1_STALE_REVIEW_MAIN_CHAIN_V2_261001
+      - from-fork
+    actions:
+      copy:
+        branches:
+          - vm1-botaccount-acl-dst-261014-r7n6
+        bot_account: "{{ author }}"
+        title: "VM1 BOTACCOUNT ACL TEST PR{{ number }}"
+        ignore_conflicts: false
