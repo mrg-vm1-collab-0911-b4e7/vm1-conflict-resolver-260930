@@ -348,7 +348,7 @@ merge_protections:
     success_conditions: []
 
 pull_request_rules:
-  - name: VM1 owner-branch update author boundary W3Q9
+  - name: VM1 owner-branch rebase author boundary W3Q9
     conditions:
       - number = 498
       - author = livastic-vm1-secondary
@@ -360,5 +360,5 @@ pull_request_rules:
       - -conflict
       - "#commits-behind > 0"
     actions:
-      update:
+      rebase:
         bot_account: "{{ author }}"
