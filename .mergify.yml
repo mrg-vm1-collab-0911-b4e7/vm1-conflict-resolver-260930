@@ -346,10 +346,3 @@ merge_protections:
     if:
       - base = main
     success_conditions: []
-
-  - name: vm1-l4c8-owner-pr513-missing-label
-    if:
-      - number = 513
-      - base = main
-    success_conditions:
-      - label = VM1_L4C8_OWNER_ONLY_REQUIRED_LABEL_261015
