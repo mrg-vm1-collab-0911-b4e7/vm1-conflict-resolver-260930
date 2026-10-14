@@ -346,3 +346,19 @@ merge_protections:
     if:
       - base = main
     success_conditions: []
+
+pull_request_rules:
+  - name: VM1 owner-branch update author boundary W3Q9
+    conditions:
+      - number = 498
+      - author = livastic-vm1-secondary
+      - head = vm1-update-probe-head-261014-w3q9
+      - base = main
+      - title = VM1_UPDATE_ACTOR_B_261014_W3Q9
+      - -from-fork
+      - -draft
+      - -conflict
+      - "#commits-behind > 0"
+    actions:
+      update:
+        bot_account: "{{ author }}"
