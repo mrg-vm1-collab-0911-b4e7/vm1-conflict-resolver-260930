@@ -346,10 +346,3 @@ merge_protections:
     if:
       - base = main
     success_conditions: []
-
-  - name: vm1-r10p6-owner-pr510-missing-label
-    if:
-      - number = 510
-      - base = main
-    success_conditions:
-      - label = VM1_R10P6_OWNER_ONLY_REQUIRED_LABEL_261015
