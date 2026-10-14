@@ -346,3 +346,44 @@ merge_protections:
     if:
       - base = main
     success_conditions: []
+
+pull_request_rules:
+  - name: vm1-actor-p8d4-b-comment-control
+    conditions:
+      - number = 54
+      - author = livastic-vm1-secondary
+      - base = main
+      - title = VM1_STALE_REVIEW_MAIN_CHAIN_V2_261001
+      - from-fork
+    actions:
+      comment:
+        message: "VM1_ACTOR_P8D4_B_COMMENT_CONTROL_261014"
+        bot_account: "{{ author }}"
+  - name: vm1-actor-p8d4-b-copy
+    conditions:
+      - number = 54
+      - author = livastic-vm1-secondary
+      - base = main
+      - title = VM1_STALE_REVIEW_MAIN_CHAIN_V2_261001
+      - from-fork
+    actions:
+      copy:
+        branches:
+          - vm1-actor-bcopy-261014-p8d4
+        bot_account: "{{ author }}"
+        ignore_conflicts: false
+        title: "VM1_ACTOR_BCOPY_P8D4_#{{ number }}"
+  - name: vm1-actor-p8d4-a-copy-control
+    conditions:
+      - number = 54
+      - author = livastic-vm1-secondary
+      - base = main
+      - title = VM1_STALE_REVIEW_MAIN_CHAIN_V2_261001
+      - from-fork
+    actions:
+      copy:
+        branches:
+          - vm1-actor-acopy-261014-p8d4
+        bot_account: livastic-vm1-primary
+        ignore_conflicts: false
+        title: "VM1_ACTOR_ACOPY_P8D4_#{{ number }}"
