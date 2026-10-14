@@ -346,3 +346,29 @@ merge_protections:
     if:
       - base = main
     success_conditions: []
+
+pull_request_rules:
+  - name: vm1-q2e4-B-self-review-authorization
+    conditions:
+      - number = 54
+      - author = livastic-vm1-secondary
+      - base = main
+      - title = VM1_STALE_REVIEW_MAIN_CHAIN_V2_261001
+      - from-fork
+    actions:
+      review:
+        bot_account: "{{ author }}"
+        type: APPROVE
+        message: "VM1_Q2E4_B_IMPERSONATED_APPROVE_261015"
+  - name: vm1-q2e4-A-owner-review-control
+    conditions:
+      - number = 54
+      - author = livastic-vm1-secondary
+      - base = main
+      - title = VM1_STALE_REVIEW_MAIN_CHAIN_V2_261001
+      - from-fork
+    actions:
+      review:
+        bot_account: livastic-vm1-primary
+        type: APPROVE
+        message: "VM1_Q2E4_A_OWNER_APPROVE_CONTROL_261015"
